@@ -15,7 +15,7 @@ defmodule Back.Router do
 
   scope "/", Back do
     pipe_through :browser # Use the default browser stack
-    Enum.to_list(1..2) |> Enum.map(fn(i)->
+    Enum.to_list(1..60) |> Enum.map(fn(i)->
       resources( "/monsters#{i}", ("Monster#{i}Controller" |> Code.eval_string |> elem(0)) )
     end)
     resources "/users", UserController
