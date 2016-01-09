@@ -1,5 +1,5 @@
 ## git clean -f -d -n -> see what changes
-## git clena -f -d -> !! removes untracked files
+## git clean -f -d -> !! removes untracked files
 File.cd "apps/back"
 range = 1..2 |> Enum.map(&(&1))
 template = fn(x)-> "mix phoenix.gen.html  Monster#{x} monsters#{x} name:string description:string" end
