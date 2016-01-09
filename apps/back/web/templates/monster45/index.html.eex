@@ -1,0 +1,28 @@
+<h2>Listing monsters45</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for monster45 <- @monsters45 do %>
+    <tr>
+      <td><%= monster45.name %></td>
+      <td><%= monster45.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: monster45_path(@conn, :show, monster45), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: monster45_path(@conn, :edit, monster45), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: monster45_path(@conn, :delete, monster45), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New monster45", to: monster45_path(@conn, :new) %>

@@ -18,6 +18,7 @@ defmodule Back.Router do
     Enum.to_list(1..60) |> Enum.map(fn(i)->
       resources( "/monsters#{i}", ("Monster#{i}Controller" |> Code.eval_string |> elem(0)) )
     end)
+
     resources "/users", UserController
     get "/", PageController, :index
   end

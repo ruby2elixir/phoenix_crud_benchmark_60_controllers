@@ -1,0 +1,18 @@
+<h2>Show monster59</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @monster59.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @monster59.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: monster59_path(@conn, :edit, @monster59) %>
+<%= link "Back", to: monster59_path(@conn, :index) %>

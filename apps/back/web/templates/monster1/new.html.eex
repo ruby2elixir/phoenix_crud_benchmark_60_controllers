@@ -1,0 +1,6 @@
+<h2>New monster1</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: monster1_path(@conn, :create) %>
+
+<%= link "Back", to: monster1_path(@conn, :index) %>
