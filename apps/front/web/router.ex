@@ -16,6 +16,7 @@ defmodule Front.Router do
   scope "/", Front do
     pipe_through :browser # Use the default browser stack
 
+    resources "/shops", ShopController
     get "/", PageController, :index
   end
 

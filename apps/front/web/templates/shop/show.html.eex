@@ -1,0 +1,18 @@
+<h2>Show shop</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @shop.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @shop.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: shop_path(@conn, :edit, @shop) %>
+<%= link "Back", to: shop_path(@conn, :index) %>
