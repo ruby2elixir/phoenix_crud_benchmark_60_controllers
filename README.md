@@ -8,5 +8,5 @@ The test suite (real database + real controller requests) finishes in total 17 s
 Most of the time ist spend loading files from disk, as it seems... The actual test run requires ca. 1 second, that is good news!
 
 
-![tests](https://raw.githubusercontent.com/ruby2elixir/umb_test/master/running_tests.gif)
+![tests](https://raw.githubusercontent.com/ruby2elixir/phoenix_crud_benchmark_60_controllers/master/running_tests.gif)
 
