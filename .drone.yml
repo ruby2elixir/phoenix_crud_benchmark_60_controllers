@@ -6,7 +6,7 @@ cache:
 build:
   image: bitwalker/alpine-elixir-phoenix:2.0
   commands:
-    - apt-get install postgresql-client
+    - apk add postgresql-client
     - mix deps.get
     - mix test
 
