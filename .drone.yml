@@ -15,6 +15,7 @@ build:
     - MIX_ENV=test mix ecto.create ecto.migrate -r Front.Repo
     - mix test
     - date
+    - echo works
 
 compose:
   database:
@@ -23,4 +24,3 @@ compose:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=postgres
     - POSTGRES_DB=postgres
-
