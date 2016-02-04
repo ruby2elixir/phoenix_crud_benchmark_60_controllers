@@ -6,7 +6,6 @@ cache:
 build:
   image: bitwalker/alpine-elixir-phoenix:2.0
   commands:
-    - date
     - apk update
     - apk add postgresql-client
     - mix deps.get
