@@ -6,13 +6,7 @@ cache:
 build:
   image: bitwalker/alpine-elixir-phoenix:2.0
   commands:
-    - apk update
-    - apk add postgresql-client
-    - mix deps.get
-    - MIX_ENV=test mix ecto.create ecto.migrate -r Back.Repo
-    - MIX_ENV=test mix ecto.migrate -r Back.Repo
-    - MIX_ENV=test mix ecto.create ecto.migrate -r Front.Repo
-    - mix test
+    - time sh/run-ci.sh
 
 compose:
   database:
