@@ -1,0 +1,18 @@
+cache:
+  mount:
+    - _build
+    - deps
+
+build:
+  image: bitwalker/alpine-elixir-phoenix:2.0
+  commands:
+    - mix deps.get
+    - mix test
+
+compose:
+  database:
+    image: postgres:9.5
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_DB=back_test
